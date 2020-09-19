@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+html
+    head
+        meta(http-equiv='content-type',content='text/html charset=utf-8')
+        meta(description='clock pug/scss animationページです')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no')
+        title clock pug/scss animatio
+        link(href='css/clock.css', type='text/css', rel='stylesheet')
+    body
+        input(type='checkbox' id="switch")
+        label(for="switch") 
+            span ON
+        #clock_content
+            #clock
+                #clock_time
+                - for (var x = 1; x <= 12; x++)
+                  span(class=`clock_${x}`) #{x}
+                #hour-hand
+                #minute-hand
+                #second-hand
+        #clock_foundation
