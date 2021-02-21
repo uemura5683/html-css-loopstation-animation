@@ -154,7 +154,7 @@
                           <div class="looper_content_loop_btn">
                               <input type="checkbox" id="looper_content_loop_num1">
                               <label for="looper_content_loop_num1"></label>
-                              <input type="checkbox" id="looper_content_loop_num1_sec">
+                              <input type="checkbox" id="looper_content_loop_num1_sec" onclick="bgm1()">
                               <label for="looper_content_loop_num1_sec"></label>
                               <span class="looper_content_loop_btn_num">1</span>
                               <div class="looper_content_loop_btn_inner">
@@ -190,7 +190,7 @@
                           <div class="looper_content_loop_btn">
                               <input type="checkbox" id="looper_content_loop_num2">
                               <label for="looper_content_loop_num2"></label>
-                              <input type="checkbox" id="looper_content_loop_num2_sec">
+                              <input type="checkbox" id="looper_content_loop_num2_sec" onclick="bgm2()">
                               <label for="looper_content_loop_num2_sec"></label>
                               <span class="looper_content_loop_btn_num">2</span>
                               <div class="looper_content_loop_btn_inner">
@@ -226,7 +226,7 @@
                           <div class="looper_content_loop_btn">
                               <input type="checkbox" id="looper_content_loop_num3">
                               <label for="looper_content_loop_num3"></label>
-                              <input type="checkbox" id="looper_content_loop_num3_sec">
+                              <input type="checkbox" id="looper_content_loop_num3_sec" onclick="bgm3()">
                               <label for="looper_content_loop_num3_sec"></label>
                               <span class="looper_content_loop_btn_num">3</span>
                               <div class="looper_content_loop_btn_inner">
@@ -262,7 +262,7 @@
                           <div class="looper_content_loop_btn">
                               <input type="checkbox" id="looper_content_loop_num4">
                               <label for="looper_content_loop_num4"></label>
-                              <input type="checkbox" id="looper_content_loop_num4_sec">
+                              <input type="checkbox" id="looper_content_loop_num4_sec" onclick="bgm4()">
                               <label for="looper_content_loop_num4_sec"></label>
                               <span class="looper_content_loop_btn_num">4</span>
                               <div class="looper_content_loop_btn_inner">
@@ -298,7 +298,7 @@
                           <div class="looper_content_loop_btn">
                               <input type="checkbox" id="looper_content_loop_num5">
                               <label for="looper_content_loop_num5"></label>
-                              <input type="checkbox" id="looper_content_loop_num5_sec">
+                              <input type="checkbox" id="looper_content_loop_num5_sec" onclick="bgm5()">
                               <label for="looper_content_loop_num5_sec"></label>
                               <span class="looper_content_loop_btn_num">5</span>
                               <div class="looper_content_loop_btn_inner">
@@ -308,6 +308,7 @@
                                           <span class="looper_content_loop_btn_slush"></span>
                                           <span class="looper_content_loop_btn_stop"></span>
                                       </div>
+
                                   </div>
                               </div>
                           </div>
@@ -315,8 +316,29 @@
                   </div>
               </div>
           </div>
+          <div class="audio_content">
+          <audio autoplay loop controls id="audio1">
+            <source src="bgm/drum.mp3">
+          </audio>
+          <audio autoplay loop controls id="audio2">
+            <source src="bgm/base.mp3">
+          </audio>
+          <audio autoplay loop controls id="audio3">
+            <source src="bgm/guiter.mp3">
+          </audio>
+          <audio autoplay loop controls id="audio4">
+            <source src="bgm/guiter2.mp3">
+          </audio>
+          <audio autoplay loop controls id="audio5">
+            <source src="bgm/guiter2.mp3">
+          </audio>
+          <audio autoplay controls id="audio6">
+            <source src="bgm/trumpets.mp3">
+          </audio>
+          </div>
       </form>
     </main>
   </div>
+  <script src="js/index.js"></script>
   </body>
 </html>
