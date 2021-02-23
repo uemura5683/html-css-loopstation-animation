@@ -654,32 +654,33 @@ content
     left: 55%;
     box-shadow: -0.1vw 0 0 0 #0c0c0f, 0.1vw 0 0 0 #0c0c0f, -0.15vw 0 0 0 #0c0c0f, 0.15vw 0 0 0 #0c0c0f, -0.2vw 0 0 0 #0c0c0f, -0.2vw 0 0 0 #0c0c0f, 0 0.2vw 0 0 #57575C, 0 0.4vw 0 0 #5D5D63, 0 0.6vw 0 0 #626168, 0 0.8vw 0 0 #65656c;
 }
-#looper_content .looper_content_replay_mix:after {
-    content: '';
-    border-left: .3vw solid #191818;
-    height: 100%;
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-}
 #looper_content .looper_content_replay_adjustment {
-    position: absolute;
-    width: 90%;
-    padding: 30% 0 0;
-    background-color: #080808;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: 0;
+  border: .1vw solid #191818;
+  height: 0%;
+  position: absolute;
+  left: -15%;
+  transform: rotate(90deg) translateX(-50%) translateY(50%);
+  -webkit-transform: rotate(90deg) translateX(-50%) translateY(50%);
+  background-color: #191818;
+  top: 90%;
+  width: 130%;
+}
+#looper_content .looper_content_replay_adjustment::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20%;
+    padding: 80% 0 0;
     border-radius: .25vw;
-    box-shadow: 0 -.1vw 0 0 #a29eb0, 0 -.15vw 0 0 #a29eb0, 0 -.2vw 0 0 #a29eb0, 0 .1vw 0 0 #131215, 0 .15vw 0 0 #131215;
-    z-index: 2;
+    background: #080808;
+    box-shadow: -0.1vw 0 0 0 #a29eb0, -0.15vw 0 0 0 #a29eb0, -0.2vw 0 0 0 #a29eb0, 0.1vw 0 0 0 #131215, 0.15vw 0 0 0 #131215;
     margin: 0 5%;
 }
-#looper_content .looper_content_replay_adjustment:after {
-    content: '';
-    border-top: .1vw solid white;
-    position:absolute;
-    width: 100%;
-    top: 50%;
-    left: 0;
+#looper_content .looper_content_replay_adjustment::-moz-focus-outer {
+  border: 0;
 }
 #looper_content .looper_content_loop_btn {
     top: 46%;
@@ -799,6 +800,9 @@ content
             transform: translateY(-50%);
     width: 25%;
     border-radius: 50%;
+}
+.audio_content {
+    display: none;
 }
 @media screen and (max-width: 1200px) {
     #looper_content .looper_content_inner_name {
