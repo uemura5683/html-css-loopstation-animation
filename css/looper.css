@@ -662,21 +662,21 @@ content
   border: .1vw solid #191818;
   height: 0%;
   position: absolute;
-  left: -15%;
-  transform: rotate(90deg) translateX(-50%) translateY(50%);
-  -webkit-transform: rotate(90deg) translateX(-50%) translateY(50%);
+  left: -22%;
+  transform: rotate(-90deg) translateX(-50%) translateY(50%);
+  -webkit-transform: rotate(-90deg) translateX(-50%) translateY(50%);
   background-color: #191818;
-  top: 90%;
+  top: 4%;
   width: 130%;
 }
 #looper_content .looper_content_replay_adjustment::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 20%;
-    padding: 80% 0 0;
+    padding: 70% 0 0;
     border-radius: .25vw;
-    background: #080808;
-    box-shadow: -0.1vw 0 0 0 #a29eb0, -0.15vw 0 0 0 #a29eb0, -0.2vw 0 0 0 #a29eb0, 0.1vw 0 0 0 #131215, 0.15vw 0 0 0 #131215;
+    background: linear-gradient(90deg,#080808,#080808 45%, #ffffff 49%,#080808 50%,#080808); 
+    box-shadow: 0.1vw 0 0 0 #a29eb0, 0.15vw 0 0 0 #a29eb0, 0.2vw 0 0 0 #a29eb0, -0.1vw 0 0 0 #131215, -0.15vw 0 0 0 #131215;
     margin: 0 5%;
 }
 #looper_content .looper_content_replay_adjustment::-moz-focus-outer {
