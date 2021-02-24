@@ -40,7 +40,7 @@ content
     height: 100%;
     opacity: 1;
     margin: 2% auto;
-    z-index: -1;
+    /*z-index: -1;*/
 }
 #looper_content * {
     font-size: 0;
@@ -662,7 +662,7 @@ content
   border: .1vw solid #191818;
   height: 0%;
   position: absolute;
-  left: -22%;
+  left: -20%;
   transform: rotate(-90deg) translateX(-50%) translateY(50%);
   -webkit-transform: rotate(-90deg) translateX(-50%) translateY(50%);
   background-color: #191818;
