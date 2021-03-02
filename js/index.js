@@ -19,6 +19,11 @@ const stay2  = document.querySelector("#looper_content_replay_stay2");
 const stay3  = document.querySelector("#looper_content_replay_stay3");
 const stay4  = document.querySelector("#looper_content_replay_stay4");
 const stay5  = document.querySelector("#looper_content_replay_stay5");
+const range1 = document.getElementById("range1");
+const range2 = document.getElementById("range2");
+const range3 = document.getElementById("range3");
+const range4 = document.getElementById("range4");
+const range5 = document.getElementById("range5");
 
 /*
 function pSpeed()
@@ -32,6 +37,43 @@ function dSpeed()
   audio1.defaultPlaybackRate = 0.5;
 }
 */
+
+const disabled = function () {
+    loop1.disabled = true;
+    loop1s.disabled = true;
+    loop2.disabled = true;
+    loop2s.disabled = true;
+    loop3.disabled = true;
+    loop3s.disabled = true;
+    loop4.disabled = true;
+    loop4s.disabled = true;
+    loop5.disabled = true;
+    loop5s.disabled = true;
+    stay1.disabled = true;
+    stay2.disabled = true;
+    stay3.disabled = true;
+    stay4.disabled = true;
+    stay5.disabled = true;
+}
+
+const anable = function () {
+    loop1.disabled = false;
+    loop1s.disabled = false;
+    loop2.disabled = false;
+    loop2s.disabled = false;
+    loop3.disabled = false;
+    loop3s.disabled = false;
+    loop4.disabled = false;
+    loop4s.disabled = false;
+    loop5.disabled = false;
+    loop5s.disabled = false;
+    stay1.disabled = false;
+    stay2.disabled = false;
+    stay3.disabled = false;
+    stay4.disabled = false;
+    stay5.disabled = false;
+}
+
 const stayRlease = function () {
     stay1.checked = false;
     stay2.checked = false;
@@ -67,40 +109,90 @@ const allstop = function() {
 }
 
 const bgm1 = function() {
-  if( ! audio1.paused || stay1.checked ){
+  if( ! audio1.paused || stay1.checked || ( loop1.checked && loop1s.checked ) ) {
     audio1.pause();
+    if( stay1.checked ) {
+      loop1.disabled = true;
+      loop1s.disabled = true;
+    } else {
+      loop1.disabled = false;
+      loop1s.disabled = false;
+    }
   } else {
     audio1.play();
+    loop1.disabled = false;
+    loop1s.disabled = false;
   }
 }
+
 const bgm2 = function() {
-  if( ! audio2.paused || stay2.checked ){
+  if( ! audio2.paused || stay2.checked || ( loop2.checked && loop2s.checked ) ) {
     audio2.pause();
+    if( stay2.checked ) {
+      loop2.disabled = true;
+      loop2s.disabled = true;
+    } else {
+      loop2.disabled = false;
+      loop2s.disabled = false;
+    }
   } else {
     audio2.play();
+    loop2.disabled = false;
+    loop2s.disabled = false;
   }
 }
+
 const bgm3 = function() {
-  if( ! audio3.paused || stay3.checked ){
+  if( ! audio3.paused || stay3.checked || ( loop3.checked && loop3s.checked ) ) {
     audio3.pause();
+    if( stay3.checked ) {
+      loop3.disabled = true;
+      loop3s.disabled = true;
+    } else {
+      loop3.disabled = false;
+      loop3s.disabled = false;
+    }
   } else {
     audio3.play();
+    loop3.disabled = false;
+    loop3s.disabled = false;
   }
 }
+
 const bgm4 = function() {
-  if( ! audio4.paused || stay4.checked ){
+  if( ! audio4.paused || stay4.checked || ( loop4.checked && loop4s.checked ) ) {
     audio4.pause();
+    if( stay4.checked ) {
+      loop4.disabled = true;
+      loop4s.disabled = true;
+    } else {
+      loop4.disabled = false;
+      loop4s.disabled = false;      
+    }
   } else {
     audio4.play();
+    loop4.disabled = false;
+    loop4s.disabled = false;
   }
 }
+
 const bgm5 = function() {
-  if( ! audio5.paused || stay5.checked ){
+  if( ! audio5.paused || stay5.checked || ( loop5.checked && loop5s.checked ) ) {
     audio5.pause();
+    if( stay5.checked ) {
+      loop5.disabled = true;
+      loop5s.disabled = true;
+    } else {
+      loop5.disabled = false;
+      loop5s.disabled = false;
+    }
   } else {
     audio5.play();
+    loop5.disabled = false;
+    loop5s.disabled = false;
   }
 }
+
 const bgmstop = function() {
     audio1.pause();
     audio1.currentTime = 0;
@@ -113,6 +205,7 @@ const bgmstop = function() {
     audio5.pause();
     audio5.currentTime = 0;
 }
+
 const bgmstartstop = function() {
   if( audio1.paused && audio2.paused && audio3.paused && audio4.paused && audio5.paused  ) {
     audio1.play();
@@ -122,6 +215,7 @@ const bgmstartstop = function() {
     audio5.play();
     allstart();
     stayRlease();
+    anable();
   } else {
     audio1.pause();
     audio1.currentTime = 0;
@@ -134,8 +228,10 @@ const bgmstartstop = function() {
     audio5.pause();
     audio5.currentTime = 0;
     allstop();
+    disabled();
   }
 }
+
 const bgmall = function() {
   if( audio1.paused && audio2.paused && audio3.paused && audio4.paused && audio5.paused  ) {
     audio1.play();
@@ -145,6 +241,7 @@ const bgmall = function() {
     audio5.play();
     allstart();
     stayRlease();
+    anable();
   } else {
     audio1.pause();
     audio2.pause();
@@ -152,40 +249,26 @@ const bgmall = function() {
     audio4.pause();
     audio5.pause();
     allstop();
+    disabled();
   }
 }
-
-const range1 = document.getElementById("range1");
-const range2 = document.getElementById("range2");
-const range3 = document.getElementById("range3");
-const range4 = document.getElementById("range4");
-const range5 = document.getElementById("range5");
 
 range1.addEventListener('change', (e) => {
     audio1.volume = range1.value / 10;
 });
+
 range2.addEventListener('change', (e) => {
     audio2.volume = range2.value / 10;
 });
+
 range3.addEventListener('change', (e) => {
     audio3.volume = range3.value / 10;
 });
+
 range4.addEventListener('change', (e) => {
     audio4.volume = range4.value / 10;
 });
+
 range5.addEventListener('change', (e) => {
     audio5.volume = range5.value / 10;
-});
-
-range5.addEventListener('ended', function() {
-    audio1.pause();
-    audio1.currentTime = 0;
-    audio2.pause();
-    audio2.currentTime = 0;
-    audio3.pause();
-    audio3.currentTime = 0;
-    audio4.pause();
-    audio4.currentTime = 0;
-    audio5.pause();
-    audio5.currentTime = 0;
 });
