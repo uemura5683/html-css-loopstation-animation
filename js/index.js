@@ -108,7 +108,7 @@ const allstop = function() {
     loop5s.checked = true;
 }
 
-const bgm1 = function() {
+const bgm1 = function(tatget) {
   if( ! audio1.paused || stay1.checked || ( loop1.checked && loop1s.checked ) ) {
     audio1.pause();
     if( stay1.checked ) {
@@ -119,13 +119,18 @@ const bgm1 = function() {
       loop1s.disabled = false;
     }
   } else {
-    audio1.play();
-    loop1.disabled = false;
-    loop1s.disabled = false;
+
+    console.log(loop1.disabled);
+    console.log(loop1s.disabled);
+
+      audio1.play();
+      loop1.disabled = false;
+      loop1s.disabled = false;
+
   }
 }
 
-const bgm2 = function() {
+const bgm2 = function(tatget) {
   if( ! audio2.paused || stay2.checked || ( loop2.checked && loop2s.checked ) ) {
     audio2.pause();
     if( stay2.checked ) {
@@ -142,7 +147,7 @@ const bgm2 = function() {
   }
 }
 
-const bgm3 = function() {
+const bgm3 = function(tatget) {
   if( ! audio3.paused || stay3.checked || ( loop3.checked && loop3s.checked ) ) {
     audio3.pause();
     if( stay3.checked ) {
@@ -158,8 +163,7 @@ const bgm3 = function() {
     loop3s.disabled = false;
   }
 }
-
-const bgm4 = function() {
+const bgm4 = function(tatget) {
   if( ! audio4.paused || stay4.checked || ( loop4.checked && loop4s.checked ) ) {
     audio4.pause();
     if( stay4.checked ) {
@@ -176,7 +180,7 @@ const bgm4 = function() {
   }
 }
 
-const bgm5 = function() {
+const bgm5 = function(tatget) {
   if( ! audio5.paused || stay5.checked || ( loop5.checked && loop5s.checked ) ) {
     audio5.pause();
     if( stay5.checked ) {
