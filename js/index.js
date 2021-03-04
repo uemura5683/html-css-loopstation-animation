@@ -24,19 +24,27 @@ const range2 = document.getElementById("range2");
 const range3 = document.getElementById("range3");
 const range4 = document.getElementById("range4");
 const range5 = document.getElementById("range5");
+const allsatrstop = document.getElementById("looper_effector_btn_all");
+const satrstop = document.getElementById("looper_effector_btn_start");
 
-/*
-function pSpeed()
-{
-  audio1.playbackRate = 0.5;
+
+const bgmtempoup = function () {
+  if( audio1.playbackRate < 3 && audio2.playbackRate < 3  && audio2.playbackRate < 3  && audio2.playbackRate < 3  && audio2.playbackRate < 3 ) {
+    audio1.playbackRate += 0.1;
+    audio2.playbackRate += 0.1;
+    audio3.playbackRate += 0.1;
+    audio4.playbackRate += 0.1;
+    audio5.playbackRate += 0.1;
+  }
 }
 
-//defaultPlaybackRateによる速度変更 ▼
-function dSpeed()
-{
-  audio1.defaultPlaybackRate = 0.5;
+const bgmtereset = function() {
+  audio1.playbackRate = 1;
+  audio2.playbackRate = 1;
+  audio3.playbackRate = 1;
+  audio4.playbackRate = 1;
+  audio5.playbackRate = 1;
 }
-*/
 
 const disabled = function () {
     loop1.disabled = true;
@@ -206,6 +214,9 @@ const bgmstop = function() {
 }
 
 const bgmstartstop = function() {
+  if( allsatrstop.checked ) {
+    allsatrstop.checked = false;
+  }
   if( audio1.paused && audio2.paused && audio3.paused && audio4.paused && audio5.paused  ) {
     audio1.play();
     audio2.play();
@@ -232,6 +243,9 @@ const bgmstartstop = function() {
 }
 
 const bgmall = function() {
+  if( satrstop.checked ) {
+    satrstop.checked = false;
+  }
   if( audio1.paused && audio2.paused && audio3.paused && audio4.paused && audio5.paused  ) {
     audio1.play();
     audio2.play();
