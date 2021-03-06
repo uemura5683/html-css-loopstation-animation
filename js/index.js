@@ -19,29 +19,29 @@ const audio1 = document.querySelector("#audio1")
     , stay3  = document.querySelector("#looper_content_replay_stay3")
     , stay4  = document.querySelector("#looper_content_replay_stay4")
     , stay5  = document.querySelector("#looper_content_replay_stay5")
-    , range1 = document.getElementById("range1")
-    , range2 = document.getElementById("range2")
-    , range3 = document.getElementById("range3")
-    , range4 = document.getElementById("range4")
-    , range5 = document.getElementById("range5")
-    , allsatrstop = document.getElementById("looper_effector_btn_all")
-    , satrstop = document.getElementById("looper_effector_btn_start")
+    , range1 = document.querySelector("#range1")
+    , range2 = document.querySelector("#range2")
+    , range3 = document.querySelector("#range3")
+    , range4 = document.querySelector("#range4")
+    , range5 = document.querySelector("#range5")
+    , allsatrstop = document.querySelector("#looper_effector_btn_all")
+    , satrstop = document.querySelector("#looper_effector_btn_start")
     , text = document.querySelector(".looper_content_inner_monitor_inner_txt");
 var initial;
 
 
-const textreset = function(time) {
+const textreset = function(time, texts) {
   initial = window.setTimeout(function () {
-      text.innerHTML = '';
+      text.innerHTML = texts;
   }, time);
 }
 
 const switchon = function() {
   text.innerHTML = 'WAIT 20second';
-  textreset(20000);
+  textreset(20000, 'PLAYING');
 }
 
-const bgmtempoup = function () {
+const bgmtempoup = function (target) {
   if( audio1.playbackRate < 3 && audio2.playbackRate < 3  && audio2.playbackRate < 3  && audio2.playbackRate < 3  && audio2.playbackRate < 3 ) {
     audio1.playbackRate += 0.1;
     audio2.playbackRate += 0.1;
@@ -51,11 +51,14 @@ const bgmtempoup = function () {
     valume = audio1.playbackRate;
     text.innerHTML = 'SPEED UP ' + valume.toFixed(1);
     clearTimeout( initial );
-    textreset(5000);
+    textreset(5000, null);
+    setTimeout(function () {
+        document.querySelector('#looper_effector_btn_start').checked = false;
+    }, 1000);
   }
 }
 
-const bgmtereset = function() {
+const bgmtereset = function(target) {
   audio1.playbackRate = 1;
   audio2.playbackRate = 1;
   audio3.playbackRate = 1;
@@ -63,7 +66,10 @@ const bgmtereset = function() {
   audio5.playbackRate = 1;
   text.innerHTML = 'SPEED RESET ' + 1;
   clearTimeout( initial );
-  textreset(5000);
+  textreset(5000, null);
+  setTimeout(function () {
+      target.checked = false;
+  }, 1000);
 }
 
 const disabled = function () {
@@ -244,7 +250,7 @@ const bgmallplay = function () {
     anable();
     text.innerHTML = 'BGM START';
     clearTimeout( initial );
-    textreset(5000);
+    textreset(5000, null);
 }
 const bgmallstop = function () {
     audio1.pause();
@@ -256,7 +262,7 @@ const bgmallstop = function () {
     disabled();
     text.innerHTML = 'BGM STOP';
     clearTimeout( initial );
-    textreset(5000);
+    textreset(5000, null);
 }
 
 const bgmstartstop = function() {
@@ -286,38 +292,37 @@ const bgmall = function() {
   }
 }
 
-
 range1.addEventListener('change', (e) => {
     audio1.volume = range1.value / 10;
     text.innerHTML = 'VALUME ' + range1.value;
     clearTimeout( initial );
-    textreset(5000);
+    textreset(5000, null);
 });
 
 range2.addEventListener('change', (e) => {
     audio2.volume = range2.value / 10;
     text.innerHTML = 'VALUME ' + range2.value;
     clearTimeout( initial );
-    textreset(5000);
+    textreset(5000, null);
 });
 
 range3.addEventListener('change', (e) => {
     audio3.volume = range3.value / 10;
     text.innerHTML = 'VALUME ' + range3.value;
     clearTimeout( initial );
-    textreset(5000);
+    textreset(5000, null);
 });
 
 range4.addEventListener('change', (e) => {
     audio4.volume = range4.value / 10;
     text.innerHTML = 'VALUME ' + range4.value;
     clearTimeout( initial );
-    textreset(5000);
+    textreset(5000, null);
 });
 
 range5.addEventListener('change', (e) => {
     audio5.volume = range5.value / 10;
     text.innerHTML = 'VALUME ' + range5.value;
     clearTimeout( initial );
-    textreset(5000);
+    textreset(5000, null);
 });
