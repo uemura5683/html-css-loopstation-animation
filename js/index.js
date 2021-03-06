@@ -26,6 +26,7 @@ const range4 = document.getElementById("range4");
 const range5 = document.getElementById("range5");
 const allsatrstop = document.getElementById("looper_effector_btn_all");
 const satrstop = document.getElementById("looper_effector_btn_start");
+const text = document.querySelector(".looper_content_inner_monitor_inner_txt");
 
 
 const bgmtempoup = function () {
@@ -35,6 +36,8 @@ const bgmtempoup = function () {
     audio3.playbackRate += 0.1;
     audio4.playbackRate += 0.1;
     audio5.playbackRate += 0.1;
+    valume = audio1.playbackRate;
+    text.innerHTML = 'Volume ' + valume.toFixed(1);
   }
 }
 
@@ -44,6 +47,7 @@ const bgmtereset = function() {
   audio3.playbackRate = 1;
   audio4.playbackRate = 1;
   audio5.playbackRate = 1;
+  text.innerHTML = 'Volume ' + 1;
 }
 
 const disabled = function () {
@@ -200,7 +204,7 @@ const bgm5 = function(target) {
   }
 }
 
-const bgmstop = function() {
+const bgmstop = function(target) {
     audio1.pause();
     audio1.currentTime = 0;
     audio2.pause();
@@ -211,6 +215,7 @@ const bgmstop = function() {
     audio4.currentTime = 0;
     audio5.pause();
     audio5.currentTime = 0;
+    console.log(target);
 }
 
 const bgmstartstop = function() {
@@ -226,6 +231,7 @@ const bgmstartstop = function() {
     allstart();
     stayRlease();
     anable();
+    text.innerHTML = 'BGM START';
   } else {
     audio1.pause();
     audio1.currentTime = 0;
@@ -239,6 +245,7 @@ const bgmstartstop = function() {
     audio5.currentTime = 0;
     allstop();
     disabled();
+    text.innerHTML = 'BGM STOP';
   }
 }
 
@@ -255,6 +262,7 @@ const bgmall = function() {
     allstart();
     stayRlease();
     anable();
+    text.innerHTML = 'BGM START';
   } else {
     audio1.pause();
     audio2.pause();
@@ -263,8 +271,10 @@ const bgmall = function() {
     audio5.pause();
     allstop();
     disabled();
+    text.innerHTML = 'BGM STOP';
   }
 }
+
 
 range1.addEventListener('change', (e) => {
     audio1.volume = range1.value / 10;

@@ -1,10 +1,10 @@
 
 @font-face {
-  font-family: "DJB Get Digital";
-  src: url("../font/DJB_Get_Digital.ttf") format("ttf"),
-       url("../font/DJB_Get_Digital.woff2") format("woff2"),
-       url("../font/DJB_Get_Digital.woff") format("woff");
+  font-family: "DSEG7Modern-Bold";
+  src: url("../font/DSEG7Modern-Bold.woff") format('woff');
+  src: url("../font/DSEG7Modern-Bold.woff2") format('woff2');
 }
+
 
 /**************
 reset
@@ -1148,7 +1148,17 @@ monitor
 
 input[id*=looper_switch]:checked + label[for*="looper_switch"] ~ #looper_content .looper_content_inner_monitor_inner {
   background-color: #6d6d82;
-  font-family: "DJB Get Digital";
+}
+input[id*=looper_switch]:checked + label[for*="looper_switch"] ~ #looper_content .looper_content_inner_monitor_inner .looper_content_inner_monitor_inner_txt{
+  font-family: "DSEG7Modern-Bold";
+  font-size: 1.2vw;
+  position: absolute;
+  color: white;
+  bottom: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(50%);
+  text-align: center;
 }
 
 /**************************
