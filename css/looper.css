@@ -1160,6 +1160,12 @@ input[id*=looper_switch]:checked + label[for*="looper_switch"] ~ #looper_content
   transform: translateY(50%);
   text-align: center;
 }
+@media screen and (max-width: 767px) {
+    input[id*=looper_switch]:checked + label[for*="looper_switch"] ~ #looper_content .looper_content_inner_monitor_inner .looper_content_inner_monitor_inner_txt {
+        transform: scale(.5) translateY(100%) translateX(-50%);
+        width: 200%;
+    }
+}
 
 /**************************
 abc

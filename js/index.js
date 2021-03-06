@@ -1,33 +1,45 @@
 
-const audio1 = document.querySelector("#audio1"); 
-const audio2 = document.querySelector("#audio2"); 
-const audio3 = document.querySelector("#audio3"); 
-const audio4 = document.querySelector("#audio4"); 
-const audio5 = document.querySelector("#audio5"); 
-const loop1  = document.querySelector("#looper_content_loop_num1");
-const loop1s = document.querySelector("#looper_content_loop_num1_sec");
-const loop2  = document.querySelector("#looper_content_loop_num2");
-const loop2s = document.querySelector("#looper_content_loop_num2_sec");
-const loop3  = document.querySelector("#looper_content_loop_num3");
-const loop3s = document.querySelector("#looper_content_loop_num3_sec");
-const loop4  = document.querySelector("#looper_content_loop_num4");
-const loop4s = document.querySelector("#looper_content_loop_num4_sec");
-const loop5  = document.querySelector("#looper_content_loop_num5");
-const loop5s = document.querySelector("#looper_content_loop_num5_sec");
-const stay1  = document.querySelector("#looper_content_replay_stay1");
-const stay2  = document.querySelector("#looper_content_replay_stay2");
-const stay3  = document.querySelector("#looper_content_replay_stay3");
-const stay4  = document.querySelector("#looper_content_replay_stay4");
-const stay5  = document.querySelector("#looper_content_replay_stay5");
-const range1 = document.getElementById("range1");
-const range2 = document.getElementById("range2");
-const range3 = document.getElementById("range3");
-const range4 = document.getElementById("range4");
-const range5 = document.getElementById("range5");
-const allsatrstop = document.getElementById("looper_effector_btn_all");
-const satrstop = document.getElementById("looper_effector_btn_start");
-const text = document.querySelector(".looper_content_inner_monitor_inner_txt");
+const audio1 = document.querySelector("#audio1") 
+    , audio2 = document.querySelector("#audio2")
+    , audio3 = document.querySelector("#audio3")
+    , audio4 = document.querySelector("#audio4")
+    , audio5 = document.querySelector("#audio5")
+    , loop1  = document.querySelector("#looper_content_loop_num1")
+    , loop1s = document.querySelector("#looper_content_loop_num1_sec")
+    , loop2  = document.querySelector("#looper_content_loop_num2")
+    , loop2s = document.querySelector("#looper_content_loop_num2_sec")
+    , loop3  = document.querySelector("#looper_content_loop_num3")
+    , loop3s = document.querySelector("#looper_content_loop_num3_sec")
+    , loop4  = document.querySelector("#looper_content_loop_num4")
+    , loop4s = document.querySelector("#looper_content_loop_num4_sec")
+    , loop5  = document.querySelector("#looper_content_loop_num5")
+    , loop5s = document.querySelector("#looper_content_loop_num5_sec")
+    , stay1  = document.querySelector("#looper_content_replay_stay1")
+    , stay2  = document.querySelector("#looper_content_replay_stay2")
+    , stay3  = document.querySelector("#looper_content_replay_stay3")
+    , stay4  = document.querySelector("#looper_content_replay_stay4")
+    , stay5  = document.querySelector("#looper_content_replay_stay5")
+    , range1 = document.getElementById("range1")
+    , range2 = document.getElementById("range2")
+    , range3 = document.getElementById("range3")
+    , range4 = document.getElementById("range4")
+    , range5 = document.getElementById("range5")
+    , allsatrstop = document.getElementById("looper_effector_btn_all")
+    , satrstop = document.getElementById("looper_effector_btn_start")
+    , text = document.querySelector(".looper_content_inner_monitor_inner_txt");
+var initial;
 
+
+const textreset = function(time) {
+  initial = window.setTimeout(function () {
+      text.innerHTML = '';
+  }, time);
+}
+
+const switchon = function() {
+  text.innerHTML = 'WAIT 20second';
+  textreset(20000);
+}
 
 const bgmtempoup = function () {
   if( audio1.playbackRate < 3 && audio2.playbackRate < 3  && audio2.playbackRate < 3  && audio2.playbackRate < 3  && audio2.playbackRate < 3 ) {
@@ -37,7 +49,9 @@ const bgmtempoup = function () {
     audio4.playbackRate += 0.1;
     audio5.playbackRate += 0.1;
     valume = audio1.playbackRate;
-    text.innerHTML = 'Volume ' + valume.toFixed(1);
+    text.innerHTML = 'SPEED UP ' + valume.toFixed(1);
+    clearTimeout( initial );
+    textreset(5000);
   }
 }
 
@@ -47,7 +61,9 @@ const bgmtereset = function() {
   audio3.playbackRate = 1;
   audio4.playbackRate = 1;
   audio5.playbackRate = 1;
-  text.innerHTML = 'Volume ' + 1;
+  text.innerHTML = 'SPEED RESET ' + 1;
+  clearTimeout( initial );
+  textreset(5000);
 }
 
 const disabled = function () {
@@ -94,7 +110,7 @@ const stayRlease = function () {
     stay5.checked = false;
 }
 
-const allstart = function() {
+const allstartcheck = function() {
     loop1.checked = true;
     loop1s.checked = false;
     loop2.checked = true;
@@ -107,7 +123,7 @@ const allstart = function() {
     loop5s.checked = false;
 }
 
-const allstop = function() {
+const allstopckeck = function() {
     loop1.checked = true;
     loop1s.checked = true;
     loop2.checked = true;
@@ -215,7 +231,32 @@ const bgmstop = function(target) {
     audio4.currentTime = 0;
     audio5.pause();
     audio5.currentTime = 0;
-    console.log(target);
+}
+
+const bgmallplay = function () {
+    audio1.play();
+    audio2.play();
+    audio3.play();
+    audio4.play();
+    audio5.play();
+    allstartcheck();
+    stayRlease();
+    anable();
+    text.innerHTML = 'BGM START';
+    clearTimeout( initial );
+    textreset(5000);
+}
+const bgmallstop = function () {
+    audio1.pause();
+    audio2.pause();
+    audio3.pause();
+    audio4.pause();
+    audio5.pause();
+    allstopckeck();
+    disabled();
+    text.innerHTML = 'BGM STOP';
+    clearTimeout( initial );
+    textreset(5000);
 }
 
 const bgmstartstop = function() {
@@ -223,29 +264,14 @@ const bgmstartstop = function() {
     allsatrstop.checked = false;
   }
   if( audio1.paused && audio2.paused && audio3.paused && audio4.paused && audio5.paused  ) {
-    audio1.play();
-    audio2.play();
-    audio3.play();
-    audio4.play();
-    audio5.play();
-    allstart();
-    stayRlease();
-    anable();
-    text.innerHTML = 'BGM START';
+    bgmallplay();
   } else {
-    audio1.pause();
+    bgmallstop();
     audio1.currentTime = 0;
-    audio2.pause();
     audio2.currentTime = 0;
-    audio3.pause();
     audio3.currentTime = 0;
-    audio4.pause();
     audio4.currentTime = 0;
-    audio5.pause();
     audio5.currentTime = 0;
-    allstop();
-    disabled();
-    text.innerHTML = 'BGM STOP';
   }
 }
 
@@ -254,44 +280,44 @@ const bgmall = function() {
     satrstop.checked = false;
   }
   if( audio1.paused && audio2.paused && audio3.paused && audio4.paused && audio5.paused  ) {
-    audio1.play();
-    audio2.play();
-    audio3.play();
-    audio4.play();
-    audio5.play();
-    allstart();
-    stayRlease();
-    anable();
-    text.innerHTML = 'BGM START';
+    bgmallplay();
   } else {
-    audio1.pause();
-    audio2.pause();
-    audio3.pause();
-    audio4.pause();
-    audio5.pause();
-    allstop();
-    disabled();
-    text.innerHTML = 'BGM STOP';
+    bgmallstop();
   }
 }
 
 
 range1.addEventListener('change', (e) => {
     audio1.volume = range1.value / 10;
+    text.innerHTML = 'VALUME ' + range1.value;
+    clearTimeout( initial );
+    textreset(5000);
 });
 
 range2.addEventListener('change', (e) => {
     audio2.volume = range2.value / 10;
+    text.innerHTML = 'VALUME ' + range2.value;
+    clearTimeout( initial );
+    textreset(5000);
 });
 
 range3.addEventListener('change', (e) => {
     audio3.volume = range3.value / 10;
+    text.innerHTML = 'VALUME ' + range3.value;
+    clearTimeout( initial );
+    textreset(5000);
 });
 
 range4.addEventListener('change', (e) => {
     audio4.volume = range4.value / 10;
+    text.innerHTML = 'VALUME ' + range4.value;
+    clearTimeout( initial );
+    textreset(5000);
 });
 
 range5.addEventListener('change', (e) => {
     audio5.volume = range5.value / 10;
+    text.innerHTML = 'VALUME ' + range5.value;
+    clearTimeout( initial );
+    textreset(5000);
 });
