@@ -1,3 +1,11 @@
+
+@font-face {
+  font-family: "DJB Get Digital";
+  src: url("../font/DJB_Get_Digital.ttf") format("ttf"),
+       url("../font/DJB_Get_Digital.woff2") format("woff2"),
+       url("../font/DJB_Get_Digital.woff") format("woff");
+}
+
 /**************
 reset
 **************/
@@ -40,7 +48,7 @@ content
     height: 100%;
     opacity: 1;
     margin: 2% auto;
-    z-index: -1;
+    /*z-index: -1;*/
 }
 #looper_content * {
     font-size: 0;
@@ -1140,8 +1148,8 @@ monitor
 
 input[id*=looper_switch]:checked + label[for*="looper_switch"] ~ #looper_content .looper_content_inner_monitor_inner {
   background-color: #6d6d82;
+  font-family: "DJB Get Digital";
 }
-
 
 /**************************
 abc
