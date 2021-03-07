@@ -36,6 +36,13 @@ const textreset = function(time, texts) {
   }, time);
 }
 
+const chdckedfalse = function(target) {
+  setTimeout(function () {
+      document.querySelector(target).checked = false;
+  }, 100);  
+}
+
+
 const switchon = function() {
   text.innerHTML = 'WAIT 20second';
   textreset(20000, 'PLAYING');
@@ -51,10 +58,8 @@ const bgmtempoup = function (target) {
     valume = audio1.playbackRate;
     text.innerHTML = 'SPEED UP ' + valume.toFixed(1);
     clearTimeout( initial );
+    chdckedfalse('#looper_effector_btn_tap');
     textreset(5000, null);
-    setTimeout(function () {
-        document.querySelector('#looper_effector_btn_start').checked = false;
-    }, 1000);
   }
 }
 
@@ -66,10 +71,8 @@ const bgmtereset = function(target) {
   audio5.playbackRate = 1;
   text.innerHTML = 'SPEED RESET ' + 1;
   clearTimeout( initial );
+  chdckedfalse('#looper_effector_btn_undo');
   textreset(5000, null);
-  setTimeout(function () {
-      target.checked = false;
-  }, 1000);
 }
 
 const disabled = function () {

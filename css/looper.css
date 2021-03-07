@@ -441,15 +441,19 @@ content
 }
 #looper_content .looper_content_inner_btn_center label[for*="looper_effector_btn_all"] {
     left: 22.1%;
+    cursor: pointer;
 }
 #looper_content .looper_content_inner_btn_center label[for*="looper_effector_btn_undo"] {
     left: 38.1%;
+    cursor: pointer;
 }
 #looper_content .looper_content_inner_btn_center label[for*="looper_effector_btn_tap"] {
     left: 53.8%;
+    cursor: pointer;
 }
 #looper_content .looper_content_inner_btn_center label[for*="looper_effector_btn_start"] {
     left: 69.8%;
+    cursor: pointer;
 }
 #looper_content .looper_effector_btn_all,
 #looper_content .looper_effector_btn_undo,
@@ -606,6 +610,7 @@ content
     width: 50%;
     padding: 0 0 30%;
     z-index: 100;
+    cursor: pointer;
 }
 #looper_content .looper_content_replay_stay {
     position: absolute;
@@ -704,6 +709,7 @@ content
     top: 0;
     left: 0;
     z-index: 100;
+    cursor: pointer;
 }
 #looper_content .looper_content_loop_btn_num {
     font-size: 1.5vw;
@@ -1116,6 +1122,7 @@ input[id*=looper_switch] + label[for*="looper_switch"] input[type="reset"] {
   font-size: 0;
 }
 
+
 @media screen and (max-width: 480px) {
   label[for*="looper_switch"] {
     width: 15%;
@@ -1126,6 +1133,62 @@ input[id*=looper_switch] + label[for*="looper_switch"] input[type="reset"] {
   }
   label[for*="looper_switch"] span:last-child {
     top: 10%;
+  }
+}
+
+/**************************
+looper comment
+**************************/
+
+#comment {
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+  left: .4vw;
+  bottom: 100%;
+  border-radius: .5vw;
+  padding: 1vw;
+  box-shadow: 0 0 0 0.4vw #141214;
+  color: white;
+  background: linear-gradient( 100deg,#2F2D35 30%,#1f1e23);
+  animation: commentmove 2s ease-in-out infinite alternate;
+  animation-duration: 1.1s;
+  text-align: center;
+}
+#comment:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-right: 0;
+  border: 1vw solid transparent;
+  border-top: 1.5vw solid #141214;
+}
+input[id*=looper_switch]:checked + label[for*="looper_switch"] #comment {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  #comment {
+    width: 16vw;
+    font-size: 1vw;
+  }
+  #comment:after {
+    top: 100%;
+    left: 58%;
+    margin-left: -9vw;
+    border: 2vw solid transparent;
+    border-top: 2vw solid #141214;
+  }
+}
+@keyframes commentmove {
+  0%{
+    transform: translateY(-50%);
+  }
+  50%{
+    transform: translateY(-45%);
+  }
+  100%{
+    transform: translateY(-50%);
   }
 }
 
