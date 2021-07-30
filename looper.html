@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <meta http-equiv="content-type" content="text/html charset=utf-8"/>
     <meta description="looper html/css animationページです"/>
@@ -9,338 +9,337 @@
     <link href="css/looper.css" type="text/css" rel="stylesheet"/>
   </head>
   <body>
-  <div class="container" id="looper">
-    <main> 
-      <form>
+    <div class="container" id="looper">
+      <main> 
+        <form>
           <input type="checkbox" id="looper_switch" onclick="switchon()">
           <label for="looper_switch">
             <span>O N</span><span>OFF</span><input type="reset" value="" onclick="bgmstop(this)">
             <div id="comment">Click here !</div>
           </label>
           <div id="looper_content">
-              <div class="looper_content_inner">
-                  <div class="looper_content_inner_top">
-                      <div class="looper_content_inner_top_top">
-                          <div class="looper_content_inner_name">BOSS RC-505 LOOP STATION</div>
-                          <div class="looper_content_inner_tuning_right">
-                              <span class="looper_content_inner_tuning_inner"></span>
-                          </div>
-                          <div class="looper_content_inner_tuning_right_three">
-                              <div class="looper_content_inner_tuning_inner_one">
-                                  <span class="looper_content_inner_tuning_ttl">Peax - MIC</span>
-                                  <span class="looper_content_inner_tuning_roll"></span>
-                                  <span>MIN</span>
-                                  <span>MAX</span>
-                              </div>
-                              <div class="looper_content_inner_tuning_inner_two">
-                                  <span class="looper_content_inner_tuning_ttl">INPUT LEVEL - INST</span>                            
-                                  <span class="looper_content_inner_tuning_roll"></span>
-                                  <span>MIN</span>
-                                  <span>MAX</span>
-                              </div>
-                              <div class="looper_content_inner_tuning_inner_three">
-                                  <span class="looper_content_inner_tuning_ttl">OUTPUT LEVEL</span>  
-                                  <span class="looper_content_inner_tuning_roll"></span>
-                                  <span>MIN</span>
-                                  <span>MAX</span>
-                              </div>
-                          </div>
-                          <div class="looper_content_inner_monitor">
-                              <span class="looper_content_inner_monitor_inner">
-                                <span class="looper_content_inner_monitor_inner_txt"></span>
-                              </span>
-                          </div>
-                          <div class="looper_content_inner_tuning_left_seven">
-                              <div class="looper_content_inner_tuning_left_inner_one">
-                                  <span>MEMORY VALUE</span>
-                                  <span class="looper_content_inner_tuning_left_roll"></span>
-                              </div>
-                              <div class="looper_content_inner_tuning_left_seven_inner">
-                                  <div class="looper_content_inner_tuning_left_inner_two">
-                                      <span class="looper_content_inner_tuning_left_back"></span>
-                                      <span class="looper_content_inner_tuning_left_roll"></span>
-                                  </div>
-                                  <div class="looper_content_inner_tuning_left_inner_three">
-                                      <span class="looper_content_inner_tuning_left_forword"></span>
-                                      <span class="looper_content_inner_tuning_left_roll"></span>
-                                  </div>
-                                  <div class="looper_content_inner_tuning_left_inner_four">
-                                      <span>SYSTEM</span>
-                                      <span class="looper_content_inner_tuning_left_roll"></span>
-                                  </div>
-                                  <div class="looper_content_inner_tuning_left_inner_five">
-                                      <span>WRITE</span>
-                                      <span class="looper_content_inner_tuning_left_roll"></span>
-                                  </div>
-                                  <div class="looper_content_inner_tuning_left_inner_six">
-                                      <span>EXIT</span>
-                                      <span class="looper_content_inner_tuning_left_roll"></span>
-                                  </div>
-                                  <div class="looper_content_inner_tuning_left_inner_seven">
-                                      <span>MEMORY</span>
-                                      <span class="looper_content_inner_tuning_left_roll"></span>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="looper_content_inner_tuning_left">
-                              <span class="looper_content_inner_tuning_inner"></span>
-                          </div>
+            <div class="looper_content_inner">
+              <div class="looper_content_inner_top">
+                <div class="looper_content_inner_top_top">
+                  <div class="looper_content_inner_name">BOSS RC-505 LOOP STATION</div>
+                  <div class="looper_content_inner_tuning_right">
+                    <span class="looper_content_inner_tuning_inner"></span>
+                  </div>
+                  <div class="looper_content_inner_tuning_right_three">
+                    <div class="looper_content_inner_tuning_inner_one">
+                      <span class="looper_content_inner_tuning_ttl">Peax - MIC</span>
+                      <span class="looper_content_inner_tuning_roll"></span>
+                      <span>MIN</span>
+                      <span>MAX</span>
+                    </div>
+                    <div class="looper_content_inner_tuning_inner_two">
+                      <span class="looper_content_inner_tuning_ttl">INPUT LEVEL - INST</span>
+                      <span class="looper_content_inner_tuning_roll"></span>
+                      <span>MIN</span>
+                      <span>MAX</span>
+                    </div>
+                    <div class="looper_content_inner_tuning_inner_three">
+                      <span class="looper_content_inner_tuning_ttl">OUTPUT LEVEL</span>  
+                      <span class="looper_content_inner_tuning_roll"></span>
+                      <span>MIN</span>
+                      <span>MAX</span>
+                    </div>
+                  </div>
+                  <div class="looper_content_inner_monitor">
+                    <span class="looper_content_inner_monitor_inner">
+                      <span class="looper_content_inner_monitor_inner_txt"></span>
+                    </span>
+                  </div>
+                  <div class="looper_content_inner_tuning_left_seven">
+                    <div class="looper_content_inner_tuning_left_inner_one">
+                      <span>MEMORY VALUE</span>
+                      <span class="looper_content_inner_tuning_left_roll"></span>
+                    </div>
+                    <div class="looper_content_inner_tuning_left_seven_inner">
+                      <div class="looper_content_inner_tuning_left_inner_two">
+                        <span class="looper_content_inner_tuning_left_back"></span>
+                        <span class="looper_content_inner_tuning_left_roll"></span>
                       </div>
-                      <div class="looper_content_inner_top_bottom">
-                          <div class="looper_content_inner_btn">
-                              <div class="looper_content_inner_btn_left">
-                                  <input type="checkbox" id="looper_effector_btn_left_typea">
-                                  <label for="looper_effector_btn_left_typea"></label>
-                                  <div class="looper_effector_btn_typea">A</div>
-                                  <input type="checkbox" id="looper_effector_btn_left_typeb">
-                                  <label for="looper_effector_btn_left_typeb"></label>
-                                  <div class="looper_effector_btn_typeb">B</div>
-                                  <input type="checkbox" id="looper_effector_btn_left_typec">
-                                  <label for="looper_effector_btn_left_typec"></label>
-                                  <div class="looper_effector_btn_typec">C</div>
+                      <div class="looper_content_inner_tuning_left_inner_three">
+                        <span class="looper_content_inner_tuning_left_forword"></span>
+                        <span class="looper_content_inner_tuning_left_roll"></span>
+                      </div>
+                      <div class="looper_content_inner_tuning_left_inner_four">
+                        <span>SYSTEM</span>
+                        <span class="looper_content_inner_tuning_left_roll"></span>
+                      </div>
+                      <div class="looper_content_inner_tuning_left_inner_five">
+                        <span>WRITE</span>
+                        <span class="looper_content_inner_tuning_left_roll"></span>
+                      </div>
+                      <div class="looper_content_inner_tuning_left_inner_six">
+                        <span>EXIT</span>
+                        <span class="looper_content_inner_tuning_left_roll"></span>
+                      </div>
+                      <div class="looper_content_inner_tuning_left_inner_seven">
+                        <span>MEMORY</span>
+                        <span class="looper_content_inner_tuning_left_roll"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="looper_content_inner_tuning_left">
+                    <span class="looper_content_inner_tuning_inner"></span>
+                  </div>
+                </div>
+                <div class="looper_content_inner_top_bottom">
+                  <div class="looper_content_inner_btn">
+                    <div class="looper_content_inner_btn_left">
+                      <input type="checkbox" id="looper_effector_btn_left_typea">
+                      <label for="looper_effector_btn_left_typea"></label>
+                      <div class="looper_effector_btn_typea">A</div>
+                      <input type="checkbox" id="looper_effector_btn_left_typeb">
+                      <label for="looper_effector_btn_left_typeb"></label>
+                      <div class="looper_effector_btn_typeb">B</div>
+                      <input type="checkbox" id="looper_effector_btn_left_typec">
+                      <label for="looper_effector_btn_left_typec"></label>
+                      <div class="looper_effector_btn_typec">C</div>
+                    </div>
+                    <div class="looper_content_inner_btn_center">
+                      <input type="checkbox" id="looper_effector_btn_all" onclick="bgmall()">
+                      <label for="looper_effector_btn_all"></label>
+                      <div class="looper_effector_btn_all">
+                          <span>ALL<br />START<br />STOP</span>
+                      </div>
+                      <input type="checkbox" id="looper_effector_btn_undo">
+                      <label for="looper_effector_btn_undo" onclick="bgmtereset(this)"></label>
+                      <div class="looper_effector_btn_undo">
+                          <span>UNDO/<br />REDO</span>
+                      </div>
+                      <input type="checkbox" id="looper_effector_btn_tap">
+                      <label for="looper_effector_btn_tap" onclick="bgmtempoup(this)"></label>
+                      <div class="looper_effector_btn_tap">
+                          <span>TAP<br />TEMPO</span>
+                      </div>
+                      <input type="checkbox" id="looper_effector_btn_start" onclick="bgmstartstop()">
+                      <label for="looper_effector_btn_start"></label>
+                      <div class="looper_effector_btn_start">
+                          <span>START/<br />STOP</span>
+                      </div>
+                      <div class="looper_effector_btn_edit"></div>
+                    </div>
+                    <div class="looper_content_inner_btn_right">
+                      <input type="checkbox" id="looper_effector_btn_right_typea">
+                      <label for="looper_effector_btn_right_typea"></label>
+                      <div class="looper_effector_btn_typea">A</div>
+                      <input type="checkbox" id="looper_effector_btn_right_typeb">
+                      <label for="looper_effector_btn_right_typeb"></label>
+                      <div class="looper_effector_btn_typeb">B</div>
+                      <input type="checkbox" id="looper_effector_btn_right_typec">
+                      <label for="looper_effector_btn_right_typec"></label>
+                      <div class="looper_effector_btn_typec">C</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="looper_content_inner_bottom">
+                <div class="looper_content_replay_block">
+                  <!-- edit btn -->
+                  <div class="looper_content_replay_edit">
+                      <input type="checkbox" id="looper_content_replay_edit1">
+                      <label for="looper_content_replay_edit1"></label>
+                      <span class="looper_content_replay_editicon">EDIT</span>
+                  </div>
+                  <!-- replay btn -->
+                  <input type="checkbox" id="looper_content_replay_stay1" onclick="bgm1(this)">
+                  <label for="looper_content_replay_stay1"></label>
+                  <div class="looper_content_replay_stay">
+                      <span class="looper_content_replay_txt">CLEAR:HOLD > 2 SEC.</span>
+                      <span class="looper_content_replay_stayicon"></span>
+                  </div>
+                  <!-- mix button -->
+                  <div class="looper_content_replay_mix">
+                    <input id="range1" min="0" max="10" value="10" type="range" class="looper_content_replay_adjustment">
+                  </div>
+                  <!-- loop button -->
+                  <div class="looper_content_loop_btn">
+                      <input type="checkbox" id="looper_content_loop_num1" onclick="bgm1(this)">
+                      <label for="looper_content_loop_num1"></label>
+                      <input type="checkbox" id="looper_content_loop_num1_sec" onclick="bgm1(this)">
+                      <label for="looper_content_loop_num1_sec"></label>
+                      <span class="looper_content_loop_btn_num">1</span>
+                      <div class="looper_content_loop_btn_inner">
+                        <div class="looper_content_loop_btn_rump">
+                          <div class="looper_content_loop_btn_btn">
+                            <span class="looper_content_loop_btn_play"></span>
+                            <span class="looper_content_loop_btn_slush"></span>
+                            <span class="looper_content_loop_btn_stop"></span>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="looper_content_replay_block">
+                    <!-- edit btn -->
+                    <div class="looper_content_replay_edit">
+                        <input type="checkbox" id="looper_content_replay_edit2">
+                        <label for="looper_content_replay_edit2"></label>
+                        <span class="looper_content_replay_editicon">EDIT</span>
+                    </div>
+                    <!-- replay btn -->
+                    <input type="checkbox" id="looper_content_replay_stay2" onclick="bgm2(this)">
+                    <label for="looper_content_replay_stay2"></label>
+                    <div class="looper_content_replay_stay">
+                        <span class="looper_content_replay_txt">CLEAR:HOLD > 2 SEC.</span>
+                        <span class="looper_content_replay_stayicon"></span>
+                    </div>
+                    <!-- mix button -->
+                    <div class="looper_content_replay_mix">
+                      <input id="range2" min="0" max="10" value="10" type="range" class="looper_content_replay_adjustment">
+                    </div>
+                    <!-- loop button -->
+                    <div class="looper_content_loop_btn">
+                        <input type="checkbox" id="looper_content_loop_num2" onclick="bgm2(this)">
+                        <label for="looper_content_loop_num2"></label>
+                        <input type="checkbox" id="looper_content_loop_num2_sec" onclick="bgm2(this)">
+                        <label for="looper_content_loop_num2_sec"></label>
+                        <span class="looper_content_loop_btn_num">2</span>
+                        <div class="looper_content_loop_btn_inner">
+                          <div class="looper_content_loop_btn_rump">
+                            <div class="looper_content_loop_btn_btn">
+                              <span class="looper_content_loop_btn_play"></span>
+                              <span class="looper_content_loop_btn_slush"></span>
+                              <span class="looper_content_loop_btn_stop"></span>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="looper_content_replay_block">
+                      <!-- edit btn -->
+                      <div class="looper_content_replay_edit">
+                          <input type="checkbox" id="looper_content_replay_edit3">
+                          <label for="looper_content_replay_edit3"></label>
+                          <span class="looper_content_replay_editicon">EDIT</span>
+                      </div>
+                      <!-- replay btn -->
+                      <input type="checkbox" id="looper_content_replay_stay3" onclick="bgm3(this)">
+                      <label for="looper_content_replay_stay3"></label>
+                      <div class="looper_content_replay_stay">
+                          <span class="looper_content_replay_txt">CLEAR:HOLD > 2 SEC.</span>
+                          <span class="looper_content_replay_stayicon"></span>
+                      </div>
+                      <!-- mix button -->
+                      <div class="looper_content_replay_mix">
+                        <input id="range3" min="0" max="10" value="10" type="range" class="looper_content_replay_adjustment">
+                      </div>
+                      <!-- loop button -->
+                      <div class="looper_content_loop_btn">
+                          <input type="checkbox" id="looper_content_loop_num3" onclick="bgm3(this)">
+                          <label for="looper_content_loop_num3"></label>
+                          <input type="checkbox" id="looper_content_loop_num3_sec" onclick="bgm3(this)">
+                          <label for="looper_content_loop_num3_sec"></label>
+                          <span class="looper_content_loop_btn_num">3</span>
+                          <div class="looper_content_loop_btn_inner">
+                            <div class="looper_content_loop_btn_rump">
+                              <div class="looper_content_loop_btn_btn">
+                                <span class="looper_content_loop_btn_play"></span>
+                                <span class="looper_content_loop_btn_slush"></span>
+                                <span class="looper_content_loop_btn_stop"></span>
                               </div>
-                              <div class="looper_content_inner_btn_center">
-                                  <input type="checkbox" id="looper_effector_btn_all" onclick="bgmall()">
-                                  <label for="looper_effector_btn_all"></label>
-                                  <div class="looper_effector_btn_all">
-                                      <span>ALL<br />START<br />STOP</span>
-                                  </div>
-                                  <input type="checkbox" id="looper_effector_btn_undo">
-                                  <label for="looper_effector_btn_undo" onclick="bgmtereset(this)"></label>
-                                  <div class="looper_effector_btn_undo">
-                                      <span>UNDO/<br />REDO</span>
-                                  </div>
-                                  <input type="checkbox" id="looper_effector_btn_tap">
-                                  <label for="looper_effector_btn_tap" onclick="bgmtempoup(this)"></label>
-                                  <div class="looper_effector_btn_tap">
-                                      <span>TAP<br />TEMPO</span>
-                                  </div>
-                                  <input type="checkbox" id="looper_effector_btn_start" onclick="bgmstartstop()">
-                                  <label for="looper_effector_btn_start"></label>
-                                  <div class="looper_effector_btn_start">
-                                      <span>START/<br />STOP</span>
-                                  </div>
-                                  <div class="looper_effector_btn_edit"></div>
-                              </div>
-                              <div class="looper_content_inner_btn_right">
-                                  <input type="checkbox" id="looper_effector_btn_right_typea">
-                                  <label for="looper_effector_btn_right_typea"></label>
-                                  <div class="looper_effector_btn_typea">A</div>
-                                  <input type="checkbox" id="looper_effector_btn_right_typeb">
-                                  <label for="looper_effector_btn_right_typeb"></label>
-                                  <div class="looper_effector_btn_typeb">B</div>
-                                  <input type="checkbox" id="looper_effector_btn_right_typec">
-                                  <label for="looper_effector_btn_right_typec"></label>
-                                  <div class="looper_effector_btn_typec">C</div>
-                              </div>
+                            </div>
                           </div>
                       </div>
                   </div>
-                  <div class="looper_content_inner_bottom">
-                      <div class="looper_content_replay_block">
-                          <!-- edit btn -->
-                          <div class="looper_content_replay_edit">
-                              <input type="checkbox" id="looper_content_replay_edit1">
-                              <label for="looper_content_replay_edit1"></label>
-                              <span class="looper_content_replay_editicon">EDIT</span>
-                          </div>
-                          <!-- replay btn -->
-                          <input type="checkbox" id="looper_content_replay_stay1" onclick="bgm1(this)">
-                          <label for="looper_content_replay_stay1"></label>
-                          <div class="looper_content_replay_stay">
-                              <span class="looper_content_replay_txt">CLEAR:HOLD > 2 SEC.</span>
-                              <span class="looper_content_replay_stayicon"></span>
-                          </div>
-                          <!-- mix button -->
-                          <div class="looper_content_replay_mix">
-                              <input id="range1" min="0" max="10" value="10" type="range" class="looper_content_replay_adjustment">
-                          </div>
-                          <!-- loop button -->
-                          <div class="looper_content_loop_btn">
-                              <input type="checkbox" id="looper_content_loop_num1" onclick="bgm1(this)">
-                              <label for="looper_content_loop_num1"></label>
-                              <input type="checkbox" id="looper_content_loop_num1_sec" onclick="bgm1(this)">
-                              <label for="looper_content_loop_num1_sec"></label>
-                              <span class="looper_content_loop_btn_num">1</span>
-                              <div class="looper_content_loop_btn_inner">
-                                  <div class="looper_content_loop_btn_rump">
-                                      <div class="looper_content_loop_btn_btn">
-                                          <span class="looper_content_loop_btn_play"></span>
-                                          <span class="looper_content_loop_btn_slush"></span>
-                                          <span class="looper_content_loop_btn_stop"></span>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
+                  <div class="looper_content_replay_block">
+                      <!-- edit btn -->
+                      <div class="looper_content_replay_edit">
+                          <input type="checkbox" id="looper_content_replay_edit4">
+                          <label for="looper_content_replay_edit4"></label>
+                          <span class="looper_content_replay_editicon">EDIT</span>
                       </div>
-                      <div class="looper_content_replay_block">
-                          <!-- edit btn -->
-                          <div class="looper_content_replay_edit">
-                              <input type="checkbox" id="looper_content_replay_edit2">
-                              <label for="looper_content_replay_edit2"></label>
-                              <span class="looper_content_replay_editicon">EDIT</span>
-                          </div>
-                          <!-- replay btn -->
-                          <input type="checkbox" id="looper_content_replay_stay2" onclick="bgm2(this)">
-                          <label for="looper_content_replay_stay2"></label>
-                          <div class="looper_content_replay_stay">
-                              <span class="looper_content_replay_txt">CLEAR:HOLD > 2 SEC.</span>
-                              <span class="looper_content_replay_stayicon"></span>
-                          </div>
-                          <!-- mix button -->
-                          <div class="looper_content_replay_mix">
-                              <input id="range2" min="0" max="10" value="10" type="range" class="looper_content_replay_adjustment">
-                          </div>
-                          <!-- loop button -->
-                          <div class="looper_content_loop_btn">
-                              <input type="checkbox" id="looper_content_loop_num2" onclick="bgm2(this)">
-                              <label for="looper_content_loop_num2"></label>
-                              <input type="checkbox" id="looper_content_loop_num2_sec" onclick="bgm2(this)">
-                              <label for="looper_content_loop_num2_sec"></label>
-                              <span class="looper_content_loop_btn_num">2</span>
-                              <div class="looper_content_loop_btn_inner">
-                                  <div class="looper_content_loop_btn_rump">
-                                      <div class="looper_content_loop_btn_btn">
-                                          <span class="looper_content_loop_btn_play"></span>
-                                          <span class="looper_content_loop_btn_slush"></span>
-                                          <span class="looper_content_loop_btn_stop"></span>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
+                      <!-- replay btn -->
+                      <input type="checkbox" id="looper_content_replay_stay4" onclick="bgm4(this)">
+                      <label for="looper_content_replay_stay4"></label>
+                      <div class="looper_content_replay_stay">
+                          <span class="looper_content_replay_txt">CLEAR:HOLD > 2 SEC.</span>
+                          <span class="looper_content_replay_stayicon"></span>
                       </div>
-                      <div class="looper_content_replay_block">
-                          <!-- edit btn -->
-                          <div class="looper_content_replay_edit">
-                              <input type="checkbox" id="looper_content_replay_edit3">
-                              <label for="looper_content_replay_edit3"></label>
-                              <span class="looper_content_replay_editicon">EDIT</span>
-                          </div>
-                          <!-- replay btn -->
-                          <input type="checkbox" id="looper_content_replay_stay3" onclick="bgm3(this)">
-                          <label for="looper_content_replay_stay3"></label>
-                          <div class="looper_content_replay_stay">
-                              <span class="looper_content_replay_txt">CLEAR:HOLD > 2 SEC.</span>
-                              <span class="looper_content_replay_stayicon"></span>
-                          </div>
-                          <!-- mix button -->
-                          <div class="looper_content_replay_mix">
-                              <input id="range3" min="0" max="10" value="10" type="range" class="looper_content_replay_adjustment">
-                          </div>
-                          <!-- loop button -->
-                          <div class="looper_content_loop_btn">
-                              <input type="checkbox" id="looper_content_loop_num3" onclick="bgm3(this)">
-                              <label for="looper_content_loop_num3"></label>
-                              <input type="checkbox" id="looper_content_loop_num3_sec" onclick="bgm3(this)">
-                              <label for="looper_content_loop_num3_sec"></label>
-                              <span class="looper_content_loop_btn_num">3</span>
-                              <div class="looper_content_loop_btn_inner">
-                                  <div class="looper_content_loop_btn_rump">
-                                      <div class="looper_content_loop_btn_btn">
-                                          <span class="looper_content_loop_btn_play"></span>
-                                          <span class="looper_content_loop_btn_slush"></span>
-                                          <span class="looper_content_loop_btn_stop"></span>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
+                      <!-- mix button -->
+                      <div class="looper_content_replay_mix">
+                        <input id="range4" min="0" max="10" value="10" type="range" class="looper_content_replay_adjustment">
                       </div>
-                      <div class="looper_content_replay_block">
-                          <!-- edit btn -->
-                          <div class="looper_content_replay_edit">
-                              <input type="checkbox" id="looper_content_replay_edit4">
-                              <label for="looper_content_replay_edit4"></label>
-                              <span class="looper_content_replay_editicon">EDIT</span>
+                      <!-- loop button -->
+                      <div class="looper_content_loop_btn">
+                        <input type="checkbox" id="looper_content_loop_num4" onclick="bgm4(this)">
+                        <label for="looper_content_loop_num4"></label>
+                        <input type="checkbox" id="looper_content_loop_num4_sec" onclick="bgm4(this)">
+                        <label for="looper_content_loop_num4_sec"></label>
+                        <span class="looper_content_loop_btn_num">4</span>
+                        <div class="looper_content_loop_btn_inner">
+                          <div class="looper_content_loop_btn_rump">
+                            <div class="looper_content_loop_btn_btn">
+                              <span class="looper_content_loop_btn_play"></span>
+                              <span class="looper_content_loop_btn_slush"></span>
+                              <span class="looper_content_loop_btn_stop"></span>
+                            </div>
                           </div>
-                          <!-- replay btn -->
-                          <input type="checkbox" id="looper_content_replay_stay4" onclick="bgm4(this)">
-                          <label for="looper_content_replay_stay4"></label>
-                          <div class="looper_content_replay_stay">
-                              <span class="looper_content_replay_txt">CLEAR:HOLD > 2 SEC.</span>
-                              <span class="looper_content_replay_stayicon"></span>
-                          </div>
-                          <!-- mix button -->
-                          <div class="looper_content_replay_mix">
-                              <input id="range4" min="0" max="10" value="10" type="range" class="looper_content_replay_adjustment">
-                          </div>
-                          <!-- loop button -->
-                          <div class="looper_content_loop_btn">
-                              <input type="checkbox" id="looper_content_loop_num4" onclick="bgm4(this)">
-                              <label for="looper_content_loop_num4"></label>
-                              <input type="checkbox" id="looper_content_loop_num4_sec" onclick="bgm4(this)">
-                              <label for="looper_content_loop_num4_sec"></label>
-                              <span class="looper_content_loop_btn_num">4</span>
-                              <div class="looper_content_loop_btn_inner">
-                                  <div class="looper_content_loop_btn_rump">
-                                      <div class="looper_content_loop_btn_btn">
-                                          <span class="looper_content_loop_btn_play"></span>
-                                          <span class="looper_content_loop_btn_slush"></span>
-                                          <span class="looper_content_loop_btn_stop"></span>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
+                        </div>
                       </div>
-                      <div class="looper_content_replay_block">
-                          <!-- edit btn -->
-                          <div class="looper_content_replay_edit">
-                              <input type="checkbox" id="looper_content_replay_edit5">
-                              <label for="looper_content_replay_edit5"></label>
-                              <span class="looper_content_replay_editicon">EDIT</span>
+                  </div>
+                  <div class="looper_content_replay_block">
+                      <!-- edit btn -->
+                      <div class="looper_content_replay_edit">
+                        <input type="checkbox" id="looper_content_replay_edit5">
+                        <label for="looper_content_replay_edit5"></label>
+                        <span class="looper_content_replay_editicon">EDIT</span>
+                      </div>
+                      <!-- replay btn -->
+                      <input type="checkbox" id="looper_content_replay_stay5" onclick="bgm5(this)">
+                      <label for="looper_content_replay_stay5"></label>
+                      <div class="looper_content_replay_stay">
+                        <span class="looper_content_replay_txt">CLEAR:HOLD > 2 SEC.</span>
+                        <span class="looper_content_replay_stayicon"></span>
+                      </div>
+                      <!-- mix button -->
+                      <div class="looper_content_replay_mix">
+                        <input id="range5" min="0" max="10" value="10" type="range" class="looper_content_replay_adjustment">
+                      </div>
+                      <!-- loop button -->
+                      <div class="looper_content_loop_btn">
+                        <input type="checkbox" id="looper_content_loop_num5" onclick="bgm5(this)">
+                        <label for="looper_content_loop_num5"></label>
+                        <input type="checkbox" id="looper_content_loop_num5_sec" onclick="bgm5(this)">
+                        <label for="looper_content_loop_num5_sec"></label>
+                        <span class="looper_content_loop_btn_num">5</span>
+                        <div class="looper_content_loop_btn_inner">
+                          <div class="looper_content_loop_btn_rump">
+                            <div class="looper_content_loop_btn_btn">
+                              <span class="looper_content_loop_btn_play"></span>
+                              <span class="looper_content_loop_btn_slush"></span>
+                              <span class="looper_content_loop_btn_stop"></span>
+                            </div>
                           </div>
-                          <!-- replay btn -->
-                          <input type="checkbox" id="looper_content_replay_stay5" onclick="bgm5(this)">
-                          <label for="looper_content_replay_stay5"></label>
-                          <div class="looper_content_replay_stay">
-                              <span class="looper_content_replay_txt">CLEAR:HOLD > 2 SEC.</span>
-                              <span class="looper_content_replay_stayicon"></span>
-                          </div>
-                          <!-- mix button -->
-                          <div class="looper_content_replay_mix">
-                              <input id="range5" min="0" max="10" value="10" type="range" class="looper_content_replay_adjustment">
-                          </div>
-                          <!-- loop button -->
-                          <div class="looper_content_loop_btn">
-                              <input type="checkbox" id="looper_content_loop_num5" onclick="bgm5(this)">
-                              <label for="looper_content_loop_num5"></label>
-                              <input type="checkbox" id="looper_content_loop_num5_sec" onclick="bgm5(this)">
-                              <label for="looper_content_loop_num5_sec"></label>
-                              <span class="looper_content_loop_btn_num">5</span>
-                              <div class="looper_content_loop_btn_inner">
-                                  <div class="looper_content_loop_btn_rump">
-                                      <div class="looper_content_loop_btn_btn">
-                                          <span class="looper_content_loop_btn_play"></span>
-                                          <span class="looper_content_loop_btn_slush"></span>
-                                          <span class="looper_content_loop_btn_stop"></span>
-                                      </div>
-
-                                  </div>
-                              </div>
-                          </div>
+                        </div>
                       </div>
                   </div>
               </div>
+            </div>
           </div>
           <div class="audio_content">
-          <audio loop controls id="audio1">
-            <source src="bgm/drum.mp3">
-          </audio>
-          <audio loop controls id="audio2">
-            <source src="bgm/base.mp3">
-          </audio>
-          <audio loop controls id="audio3">
-            <source src="bgm/guiter.mp3">
-          </audio>
-          <audio loop controls id="audio4">
-            <source src="bgm/guiter2.mp3">
-          </audio>
-          <audio controls id="audio5">
-            <source src="bgm/trumpets.mp3">
-          </audio>
+            <audio loop controls id="audio1">
+              <source src="bgm/drum.mp3">
+            </audio>
+            <audio loop controls id="audio2">
+              <source src="bgm/base.mp3">
+            </audio>
+            <audio loop controls id="audio3">
+              <source src="bgm/guiter.mp3">
+            </audio>
+            <audio loop controls id="audio4">
+              <source src="bgm/guiter2.mp3">
+            </audio>
+            <audio controls id="audio5">
+              <source src="bgm/trumpets.mp3">
+            </audio>
           </div>
-      </form>
-    </main>
-  </div>
-  <script src="js/index.js"></script>
+        </form>
+      </main>
+    </div>
+    <script src="js/index.js"></script>
   </body>
 </html>
